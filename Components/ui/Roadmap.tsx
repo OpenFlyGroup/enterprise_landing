@@ -1,28 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
-
-const roadmap = [
-  {
-    quarter: "Q1 2026",
-    title: "MVP WeTrack",
-    desc: "Magazine, mood, analytics",
-    done: false,
-  },
-  {
-    quarter: "Q3 2026",
-    title: "Synchronization",
-    desc: "Couples, families, analytics",
-    done: false,
-  },
-  {
-    quarter: "2027+",
-    title: "AI and growth",
-    desc: "Recommendations, challenges, integrations",
-    done: false,
-  },
-];
-
-export default function Roadmap() {
+export interface IRoadmap {
+  quarter: string;
+  title: string;
+  desc: string;
+  done: boolean;
+}
+const Roadmap = ({ roadmap }: { roadmap: IRoadmap[] }) => {
   return (
     <section id="roadmap" className="py-20 px-8">
       <div>
@@ -55,4 +39,6 @@ export default function Roadmap() {
       </div>
     </section>
   );
-}
+};
+
+export default Roadmap;
