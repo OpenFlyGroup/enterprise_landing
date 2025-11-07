@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+}
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: #f8fafc;
+  --color-base-200: #e2e8f0;
+  --color-base-300: #cbd5e1;
+  --color-base-content: oklch(21% 0.006 285.885);
+  --color-primary: #a3e635;
+  --color-primary-content: oklch(93% 0.034 272.788);
+  --color-secondary: #64748b;
+  --color-secondary-content: oklch(94% 0.028 342.258);
+  --color-accent: #06b6d4;
+  --color-accent-content: oklch(38% 0.063 188.416);
+  --color-neutral: #e2e8f0;
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: #0ea5e9;
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: #22c55e;
+  --color-success-content: oklch(37% 0.077 168.94);
+  --color-warning: #f59e0b;
+  --color-warning-content: oklch(41% 0.112 45.904);
+  --color-error: #ef4444;
+  --color-error-content: oklch(27% 0.105 12.094);
+  --radius-selector: 2rem;
+  --radius-field: 2rem;
+  --radius-box: 2rem;
+  --size-selector: 0.3125rem;
+  --size-field: 0.28125rem;
+  --border: 2px;
+  --depth: 1;
+  --noise: 1;
+}
+
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: false;
+  prefersdark: false;
+  color-scheme: "dark";
+  --color-base-100: #0f172a;
+  --color-base-200: #1e293b;
+  --color-base-300: #334155;
+  --color-base-content: oklch(97.807% 0.029 256.847);
+  --color-primary: #a3e635;
+  --color-primary-content: oklch(96% 0.018 272.314);
+  --color-secondary: #64748b;
+  --color-secondary-content: oklch(94% 0.028 342.258);
+  --color-accent: #06b6d4;
+  --color-accent-content: oklch(38% 0.063 188.416);
+  --color-neutral: #1e293b;
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: #0ea5e9;
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: #22c55e;
+  --color-success-content: oklch(37% 0.077 168.94);
+  --color-warning: #f59e0b;
+  --color-warning-content: oklch(41% 0.112 45.904);
+  --color-error: #ef4444;
+  --color-error-content: oklch(27% 0.105 12.094);
+  --radius-selector: 2rem;
+  --radius-field: 2rem;
+  --radius-box: 2rem;
+  --size-selector: 0.3125rem;
+  --size-field: 0.28125rem;
+  --border: 2px;
+  --depth: 1;
+  --noise: 0;
+}
