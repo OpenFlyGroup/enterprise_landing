@@ -1,6 +1,7 @@
 import Link from "next/link";
 import WeTrackCard from "./WeTrackCard/WeTrackCard";
 import { ReactElement } from "react";
+import DokkerSpaceCard from "./DokkerSpaceCard/DokkerSpaceCard";
 
 const BaseUrl = "projects/";
 
@@ -15,6 +16,11 @@ const projects: TProject[] = [
     id: "0",
     card: <WeTrackCard />,
     url: "wetrack",
+  },
+  {
+    id: "1",
+    card: <DokkerSpaceCard />,
+    url: "dokker_space",
   },
 ];
 
