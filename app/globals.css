@@ -1,4 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
 @import "tailwindcss";
+
 @plugin "daisyui" {
   themes: light --default, dark --prefersdark;
 }
@@ -40,8 +45,8 @@
 
 @plugin "daisyui/theme" {
   name: "dark";
-  default: false;
-  prefersdark: false;
+  default: true;
+  prefersdark: true;
   color-scheme: "dark";
   --color-base-100: #0f172a;
   --color-base-200: #1e293b;

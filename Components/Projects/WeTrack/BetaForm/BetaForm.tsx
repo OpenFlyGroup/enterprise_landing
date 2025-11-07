@@ -26,9 +26,10 @@ export default function BetaForm() {
         whileInView={{ opacity: 1 }}
         className="max-w-2xl mx-auto text-center"
       >
-        <h2 className="text-4xl font-bold mb-6">Хочешь первым попробовать?</h2>
+        <h2 className="text-4xl font-bold mb-6">Wanna try it first?</h2>
         <p className="text-lg mb-10">
-          Бета-тест стартует в марте 2026. Первые 500 — бесплатно навсегда.
+          The beta test will start in March 2026. The first 500 are free
+          forever.
         </p>
 
         <form
@@ -37,7 +38,7 @@ export default function BetaForm() {
         >
           <input
             type="email"
-            placeholder="твой@email.ru"
+            placeholder="urmail@email.ru"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="input input-bordered flex-1"
@@ -48,7 +49,7 @@ export default function BetaForm() {
             className="btn btn-primary"
             disabled={status === "loading"}
           >
-            {status === "loading" ? "Отправляем..." : "Записаться"}
+            {status === "loading" ? "Sending..." : "Send"}
           </button>
         </form>
 
@@ -58,7 +59,7 @@ export default function BetaForm() {
             animate={{ opacity: 1, y: 0 }}
             className="mt-4 text-success"
           >
-            Готово! Письмо придёт на {email}
+            Ready! The email will be sent to {email}
           </motion.p>
         )}
       </motion.div>

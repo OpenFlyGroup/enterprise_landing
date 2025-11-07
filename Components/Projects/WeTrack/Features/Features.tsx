@@ -12,25 +12,31 @@ import {
 const features = [
   {
     icon: Calendar,
-    title: "Общий календарь",
-    desc: "Синхронизация задач в реальном времени",
+    title: "Shared calendar",
+    desc: "Real-time task synchronization",
   },
-  { icon: Heart, title: "Трекер настроения", desc: "Оцени день: 1–5 + эмодзи" },
+  { icon: Heart, title: "Mood Tracker", desc: "Sentiment Analytics" },
   {
     icon: BarChart3,
-    title: "Анализ занятости",
-    desc: "% времени на работу, семью, себя",
+    title: "Employment analysis",
+    desc: "% of the time for work, family, self",
   },
-  { icon: Bell, title: "Умные алерты", desc: "«Партнёр в стрессе»" },
-  { icon: Lock, title: "Приватность", desc: "Вы решаете, что показывать" },
-  { icon: Smartphone, title: "Офлайн-режим", desc: "Работает без интернета" },
+  { icon: Bell, title: "Smart alerts", desc: "«Stressed partner»" },
+  { icon: Lock, title: "Privacy", desc: "You decide what to show" },
+  {
+    icon: Smartphone,
+    title: "Offline-mode",
+    desc: "It works without internet connection",
+  },
 ];
 
 export default function Features() {
   return (
-    <section className="py-20 px-4 bg-base-200/50">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-16">Что внутри</h2>
+    <section className="py-20 px-8 bg-base-200/50">
+      <div>
+        <h2 className="text-4xl font-bold text-center mb-16">
+          What&apos;s inside
+        </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((f, i) => (
             <motion.div
