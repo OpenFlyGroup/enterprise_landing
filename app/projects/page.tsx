@@ -1,5 +1,11 @@
-const Projects = () => {
-  return <div>Projects</div>;
-};
+import Projects from "@/Components/layout/Projects/Projects";
 
-export default Projects;
+const ProjectsPage = () => (
+  <>
+    <div className="min-h-screen mt-20">
+      <Projects />
+    </div>
+  </>
+);
+
+export default ProjectsPage;
