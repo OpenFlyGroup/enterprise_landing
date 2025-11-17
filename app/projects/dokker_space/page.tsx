@@ -1,9 +1,9 @@
 "use client";
-import FeaturesCarousel from "@/Components/Projects/DokkerSpace/FeaturesCarousel/FeaturesCarousel";
-import Pricing from "@/Components/Projects/DokkerSpace/Pricing/Pricing";
-import Preview, { PreviewProps } from "@/Components/ui/Preview";
-import Roadmap, { IRoadmap } from "@/Components/ui/Roadmap";
-import Stack, { IStack } from "@/Components/ui/Stack";
+import FeaturesCarousel from "@/src/components/Projects/DokkerSpace/FeaturesCarousel/FeaturesCarousel";
+import Pricing from "@/src/components/Projects/DokkerSpace/Pricing/Pricing";
+import Preview, { PreviewProps } from "@/src/shared/ui/Preview";
+import Roadmap, { IRoadmap } from "@/src/shared/ui/Roadmap";
+import Stack, { IStack } from "@/src/shared/ui/Stack";
 import Link from "next/link";
 import {
   SiDjango,

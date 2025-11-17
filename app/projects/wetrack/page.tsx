@@ -1,10 +1,10 @@
 "use client";
-import BetaForm from "@/Components/Projects/WeTrack/BetaForm/BetaForm";
-import Features from "@/Components/Projects/WeTrack/Features/Features";
-import Preview, { PreviewProps } from "@/Components/ui/Preview";
+import BetaForm from "@/src/components/Projects/WeTrack/BetaForm/BetaForm";
+import Features from "@/src/components/Projects/WeTrack/Features/Features";
+import Preview, { PreviewProps } from "@/src/shared/ui/Preview";
+import Roadmap, { IRoadmap } from "@/src/shared/ui/Roadmap";
+import Stack, { IStack } from "@/src/shared/ui/Stack";
 import Link from "next/link";
-import Roadmap, { IRoadmap } from "@/Components/ui/Roadmap";
-import Stack, { IStack } from "@/Components/ui/Stack";
 import {
   SiDjango,
   SiDocker,

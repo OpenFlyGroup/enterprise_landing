@@ -1,4 +1,4 @@
-import Projects from "@/Components/layout/Projects/Projects";
+import Projects from "@/src/components/layout/Projects/Projects";
 
 const ProjectsPage = () => (
   <>
