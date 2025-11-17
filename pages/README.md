@@ -1,1 +1,0 @@
-# NextJS App Router stub
