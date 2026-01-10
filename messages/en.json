@@ -1,0 +1,265 @@
+{
+  "aboutUs": "About us",
+  "mission": "Mission",
+  "projects": {
+    "sectionTitle": "Our projects",
+    "titlePrefix": "Our",
+    "titleSuffix": "Projects",
+    "featuredProject": "Featured Project"
+  },
+  "navProjects": "Projects",
+  "menu": "Menu",
+  "close": "Close",
+  "learnMore": "Learn More",
+  "contact": "Contact",
+  "hero": {
+    "title": "Welcome to OpenFly",
+    "titlePrefix": "Welcome to",
+    "titleAccent": "OpenFly",
+    "subtitle": "🌟 We are a vibrant community building innovative apps and a powerful service ecosystem to help people live balanced, fulfilling lives",
+    "badge": "Community Powered"
+  },
+  "about": {
+    "sectionTitle": "About Us",
+    "mainText": "At OpenFly, we're passionate about using technology to make life better. Our team of developers and dreamers is working on:",
+    "weTrack": "WeTrack: A cross-platform app for managing business and mood.",
+    "services": "Services Ecosystem: A scalable network of services built with NestJS, Python, and Go.",
+    "point": "💡 Our point: To create tools that inspire balance, connection, and personal growth through collaboration.",
+    "whoWeAre": "Who We Are",
+    "teamDesc": "We are a small team of developers from Novosibirsk, Russia — passionate enthusiasts from NSU and NSUEM.",
+    "servicesDesc": "Full-stack and backend engineers who strive to build modern, reliable, and user-friendly services that make a real difference in people's lives.",
+    "love": "Building the future from Siberia with love ❤️",
+    "titlePrefix": "Crafting",
+    "titleAccent": "Digital",
+    "titleSuffix": "Experiences from Siberia",
+    "card1Title": "Full-stack Excellence",
+    "card2Title": "Scalable Solutions",
+    "teamTitlePrefix": "A Team of",
+    "teamTitleAccent": "Enthusiasts"
+  },
+  "missionSection": {
+    "sectionTitle": "Our mission",
+    "badge": "The Core",
+    "titlePrefix": "Our",
+    "titleAccent": "Values",
+    "titleSuffix": "& Mission",
+    "cards": {
+      "0": {
+        "title": "Connection",
+        "description": "Helping people get closer"
+      },
+      "1": {
+        "title": "Mindfulness",
+        "description": "Understand yourself and others"
+      },
+      "2": {
+        "title": "Advancement",
+        "description": "Grow through play and data"
+      }
+    }
+  },
+  "weTrack": {
+    "card": {
+      "title": "WeTrack",
+      "description": "Your balance companion: tasks, mood, gamification.",
+      "moodCoins": "Mood Coins and achievements",
+      "syncing": "Syncing with a partner/family",
+      "employmentAnalysis": "Employment analysis and remind alerts",
+      "comingSoon": "Coming Soon",
+      "screenshots": "Screenshots will appear here"
+    },
+    "title": "WeTrack",
+    "description": "is your ultimate companion for tracking tasks, mood, and relationships. Whether you're flying solo, in a relationship, or managing a family, this app has you covered! 🌍",
+    "features": "Features",
+    "whatsInside": "What's inside",
+    "featuresBadge": "Core capabilities",
+    "joinBeta": "Join Beta",
+    "sharedCalendar": "Shared calendar",
+    "sharedCalendarDesc": "Real-time task synchronization",
+    "moodTracker": "Mood Tracker",
+    "moodTrackerDesc": "Sentiment Analytics",
+    "employmentAnalysis": "Employment analysis",
+    "employmentAnalysisDesc": "% of the time for work, family, self",
+    "smartAlerts": "Smart alerts",
+    "smartAlertsDesc": "\"Stressed partner\"",
+    "privacy": "Privacy",
+    "privacyDesc": "You decide what to show",
+    "offlineMode": "Offline-mode",
+    "offlineModeDesc": "It works without internet connection",
+    "betaForm": {
+      "title": "Wanna try it first?",
+      "description": "The beta test will start in March 2026. The first 500 are free forever.",
+      "placeholder": "team@openfly.tech",
+      "buttonSend": "Send",
+      "buttonSending": "Sending...",
+      "successMessage": "Ready! The email will be sent to"
+    }
+  },
+  "dokkerSpace": {
+    "card": {
+      "title": "Dokker Space",
+      "description": "Create legal documents quickly and securely.",
+      "subtitle": "Your reliable assistant for drafting contracts online.",
+      "readyInSeconds": "Ready in seconds",
+      "secureCompliant": "Secure & legally compliant",
+      "templates": "Free templates + Pro from $2/mo",
+      "secureEngine": "Secure Document Engine",
+      "poweredBy": "Powered by AI + legal templates",
+      "aiPowered": "AI Powered",
+      "viewCaseStudy": "View Case Study"
+    },
+    "title": "Dokker Space",
+    "description": "is your ultimate companion for tracking tasks, mood, and relationships. Whether you're flying solo, in a relationship, or managing a family, this app has you covered! 🌍",
+    "pricing": "Pricing",
+    "visualTour": "Visual Tour",
+    "howItWorks": "How it works?",
+    "carousel": {
+      "title1": "Main Dashboard",
+      "title2": "Smart Template Browser",
+      "title3": "AI-Curated Collections"
+    }
+  },
+  "join": {
+    "sectionTitle": "Join us",
+    "opportunities": "Opportunities",
+    "betaTest": {
+      "title": "Beta test",
+      "description": "Wanna try WeTrack first?",
+      "button": "Send application"
+    },
+    "jobOpportunity": {
+      "title": "Job opportunity",
+      "description": "Join our services",
+      "button": "There are no open job openings"
+    },
+    "partners": {
+      "title": "Partners",
+      "description": "Integrations, API, Investments",
+      "button": "Write us"
+    }
+  },
+  "footer": {
+    "tagline": "Tools for a conscious life",
+    "copyright": "© 2025 OpenFly. All rights reserved."
+  },
+  "projectPages": {
+    "dokkerSpace": {
+      "title": "Dokker Space",
+      "description": "Create legal documents quickly and securely. Your reliable assistant for drafting contracts online.",
+      "roadmapButton": "Roadmap 2026",
+      "roadmap": {
+        "0": {
+          "quarter": "Q2 2026",
+          "title": "MVP Launch",
+          "desc": "Templates + Editor"
+        },
+        "1": {
+          "quarter": "Q4 2026",
+          "title": "Digital Signatures",
+          "desc": "e-Sign & Sharing"
+        },
+        "2": {
+          "quarter": "2027+",
+          "title": "AI Legal Assistant",
+          "desc": "Auto-fill & Compliance"
+        }
+      }
+    },
+    "weTrack": {
+      "title": "WeTrack",
+      "description": "is your ultimate companion for tracking tasks, mood, and relationships. Whether you're flying solo, in a relationship, or managing a family, this app has you covered! 🌍",
+      "roadmapButton": "Roadmap 2026",
+      "roadmap": {
+        "0": {
+          "quarter": "Q1 2026",
+          "title": "MVP WeTrack",
+          "desc": "Magazine, mood, analytics"
+        },
+        "1": {
+          "quarter": "Q3 2026",
+          "title": "Synchronization",
+          "desc": "Couples, families, analytics"
+        },
+        "2": {
+          "quarter": "2027+",
+          "title": "AI and growth",
+          "desc": "Recommendations, challenges, integrations"
+        }
+      }
+    }
+  },
+  "stack": {
+    "badge": "Architecture",
+    "titlePrefix": "Microservice",
+    "titleAccent": "Ecosystem",
+    "description": "Our architecture is built for extreme scale and reliability, utilizing a federated microservice approach.",
+    "techBadge": "The Tech Stack",
+    "techTitlePrefix": "Our",
+    "techTitleAccent": "Technologies",
+    "gatewayTitle": "Gateway",
+    "gatewayDesc": "NestJS + Fastify for high performance and low latency routing.",
+    "authTitle": "Auth Service",
+    "authDesc": "Secure Django implementation for SSO, OAuth2, and JWT."
+  },
+  "roadmap": {
+    "badge": "Future Milestones",
+    "titlePrefix": "Project",
+    "titleAccent": "Roadmap"
+  },
+  "pricing": {
+    "badge": "Pricing",
+    "titlePrefix": "Simple",
+    "titleAccent": "Pricing",
+    "tagline": "Transparent plans for independent professionals and enterprises alike.",
+    "mostPopular": "Most Popular",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "cta": "Get Started",
+        "features": ["5 templates", "PDF export", "Watermark"]
+      },
+      "pro": {
+        "name": "Pro",
+        "cta": "Go Pro",
+        "features": [
+          "Unlimited templates",
+          "Digital signature",
+          "No watermark",
+          "Priority support"
+        ]
+      }
+    }
+  },
+  "charity": {
+    "sectionTitle": "Social Responsibility",
+    "badge": "Partnership",
+    "titlePrefix": "OpenFly &",
+    "titleAccent": "Plus Dobro",
+    "tagline": "Empowering citizens through synergy of technology and professional legal protection.",
+    "founder": {
+      "badge": "The Founder",
+      "name": "Alexey O. Obmolov",
+      "role": "Lawyer & Public Figure",
+      "bio": "Since 2015, Alexey has completed over 1,500 bankruptcy procedures, restoring financial stability to hundreds of families. He founded 'Plus Dobro' to provide legal aid not as a service, but as a vital social tool."
+    },
+    "activities": {
+      "title": "What we do",
+      "personal": {
+        "title": "Targeted Support",
+        "desc": "Full legal representation for citizens in difficult life situations, from consultation to court."
+      },
+      "education": {
+        "title": "Legal Literacy",
+        "desc": "Raising awareness and explaining complex legal issues in simple terms through modern media."
+      },
+      "platform": {
+        "title": "Dokker Space Platform",
+        "desc": "Launching a free digital platform for people to generate legal documents independently."
+      }
+    },
+    "success": {
+      "title": "Our Successes",
+      "subtitle": "Coming soon: Stories of restored rights and regained stability."
+    }
+  }
+}
