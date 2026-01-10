@@ -1,19 +1,23 @@
-import About from "@/src/components/layout/About/About";
-import Join from "@/src/components/layout/Join/Join";
-import Missions from "@/src/components/layout/Missions/Missions";
-import Projects from "@/src/components/layout/Projects/Projects";
-import Hero from "@/src/shared/ui/Hero";
+"use client";
 
-export default function HomePage() {
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+
+export default function RootPage() {
+  const router = useRouter();
+
+  useEffect(() => {
+    // Detect user's preferred language
+    const userLanguage = navigator.language.startsWith('ru') ? 'ru' : 'en';
+    router.replace(`/${userLanguage}`);
+  }, [router]);
+
   return (
-    <main className="overflow-x-hidden">
-      <div className="max-w-screen-2xl mx-auto">
-        <Hero />
-        <About />
-        <Projects />
-        <Missions />
-        <Join />
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+        <p>Loading...</p>
       </div>
-    </main>
+    </div>
   );
 }

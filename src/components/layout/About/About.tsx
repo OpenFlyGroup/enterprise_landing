@@ -1,94 +1,108 @@
 "use client";
 import { motion } from "motion/react";
-import { Globe, Users, HeartHandshake } from "lucide-react";
+import { Globe, Users, HeartHandshake, Code, Rocket } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function About() {
+  const t = useTranslations();
+
   return (
-    <section id="about" className="py-16 md:py-24 bg-base-200/50">
-      <div className="mx-auto px-4 md:px-8">
+    <section id="about" className="section-padding bg-base-200/30">
+      <div className="container mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="grid md:grid-cols-2 gap-12 lg:gap-20 xl:gap-32 items-start"
+          className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center"
         >
-          <div className="order-2 md:order-1">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 flex items-center gap-3">
-              <Globe className="w-9 h-9 md:w-10 md:h-10 text-primary" />
-              About Us
+          <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-bold mb-6">
+              <Globe className="w-4 h-4" />
+              <span>{t("about.sectionTitle")}</span>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 leading-tight">
+              {t("about.titlePrefix")}{" "}
+              <span className="text-primary italic">
+                {t("about.titleAccent")}
+              </span>{" "}
+              {t("about.titleSuffix")}
             </h2>
 
-            <p className="text-lg md:text-xl mb-6 text-base-content/90">
-              At OpenFly, we&apos;re passionate about using technology to make
-              life better. Our team of developers and dreamers is working on:
+            <p className="text-xl mb-12 text-base-content/70 leading-relaxed max-w-2xl">
+              {t("about.mainText")}
             </p>
 
-            <ul className="space-y-5 mb-8">
-              <li className="flex items-start gap-4">
-                <span className="text-primary text-2xl mt-0.5">📱</span>
-                <div>
-                  <strong className="text-lg">WeTrack:</strong>{" "}
-                  <span className="text-base-content/80">
-                    A cross-platform app for managing business and mood.
-                  </span>
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div className="glass p-6 rounded-3xl group hover:border-primary/50 transition-colors">
+                <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Code className="w-6 h-6 text-primary" />
                 </div>
-              </li>
-              <li className="flex items-start gap-4">
-                <span className="text-primary text-2xl mt-0.5">🛠️</span>
-                <div>
-                  <strong className="text-lg">Services Ecosystem:</strong>{" "}
-                  <span className="text-base-content/80">
-                    A scalable network of services built with NestJS, Python,
-                    and Go.
-                  </span>
-                </div>
-              </li>
-            </ul>
+                <h3 className="text-xl font-bold mb-2">
+                  {t("about.card1Title")}
+                </h3>
+                <p className="text-base-content/60 text-sm leading-relaxed">
+                  {t("about.weTrack")}
+                </p>
+              </div>
 
-            <div className="bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm">
-              <p className="text-sm md:text-base italic text-base-content/80">
-                <strong className="text-primary">💡 Our point:</strong> To
-                create tools that inspire balance, connection, and personal
-                growth through collaboration.
-              </p>
+              <div className="glass p-6 rounded-3xl group hover:border-accent/50 transition-colors">
+                <div className="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Rocket className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">
+                  {t("about.card2Title")}
+                </h3>
+                <p className="text-base-content/60 text-sm leading-relaxed">
+                  {t("about.services")}
+                </p>
+              </div>
             </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="order-1 md:order-2"
-          >
-            <div className="card bg-base-100 shadow-xl p-6 md:p-8 lg:p-10">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3">
-                <Users className="w-8 h-8 text-secondary" />
-                Who We Are
+          <div className="relative">
+            {/* Visual element / Card group */}
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 blur-3xl rounded-full" />
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-accent/20 blur-3xl rounded-full" />
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="card glass shadow-2xl p-8 md:p-12 relative z-10 border-base-content/10"
+            >
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-secondary text-sm font-bold mb-8">
+                <Users className="w-4 h-4" />
+                <span>{t("about.whoWeAre")}</span>
+              </div>
+
+              <h3 className="text-3xl font-black mb-6">
+                {t("about.teamTitlePrefix")}{" "}
+                <span className="text-secondary">
+                  {t("about.teamTitleAccent")}
+                </span>
               </h3>
 
-              <p className="text-lg md:text-xl mb-5 leading-relaxed">
-                We are a{" "}
-                <strong>
-                  small team of developers from Novosibirsk, Russia
-                </strong>{" "}
-                — passionate enthusiasts from <strong>NSU</strong> and{" "}
-                <strong>NSUEM</strong>.
+              <p className="text-lg opacity-80 mb-6 leading-relaxed">
+                {t("about.teamDesc")}
               </p>
 
-              <p className="text-lg md:text-xl mb-8 leading-relaxed">
-                Full-stack and backend engineers who strive to build{" "}
-                <strong>modern, reliable, and user-friendly services</strong>{" "}
-                that make a real difference in people&apos;s lives.
+              <p className="text-lg opacity-80 mb-10 leading-relaxed">
+                {t("about.servicesDesc")}
               </p>
 
-              <div className="flex items-center gap-3 text-base md:text-lg">
-                <HeartHandshake className="w-6 h-6 text-primary shrink-0" />
-                <span>Building the future from Siberia with love ❤️</span>
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-base-content/5 border border-base-content/5">
+                <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center shrink-0">
+                  <HeartHandshake className="w-5 h-5 text-primary" />
+                </div>
+                <span className="font-bold text-sm tracking-wide uppercase italic">
+                  {t("about.love")}
+                </span>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>
