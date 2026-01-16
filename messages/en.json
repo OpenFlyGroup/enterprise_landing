@@ -102,7 +102,7 @@
       "subtitle": "Your reliable assistant for drafting contracts online.",
       "readyInSeconds": "Ready in seconds",
       "secureCompliant": "Secure & legally compliant",
-      "templates": "Free templates + Pro from $2/mo",
+      "templates": "Free templates + Pro from $20/mo",
       "secureEngine": "Secure Document Engine",
       "poweredBy": "Powered by AI + legal templates",
       "aiPowered": "AI Powered",
@@ -115,8 +115,15 @@
     "howItWorks": "How it works?",
     "carousel": {
       "title1": "Main Dashboard",
+      "desc1": "A convenient overview of all your documents with quick statistics and recent changes.",
       "title2": "Smart Template Browser",
-      "title3": "AI-Curated Collections"
+      "desc2": "Find the legal documents you need in seconds with our intelligent filtering system.",
+      "title3": "AI-Curated Collections",
+      "desc3": "Personalized document sets formed by AI specifically for your tasks.",
+      "title4": "Document Editor",
+      "desc4": "A powerful tool to customize templates according to your specific requirements.",
+      "title5": "Digital Signature",
+      "desc5": "Securely sign and send documents directly from the platform."
     }
   },
   "join": {
