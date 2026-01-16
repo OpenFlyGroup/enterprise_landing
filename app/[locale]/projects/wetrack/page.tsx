@@ -9,24 +9,29 @@ import { setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 
 
-export const metadata: Metadata = {
-  title: "WeTrack - Mood and Task Tracking App",
-  description: "WeTrack is your ultimate companion for tracking tasks, mood, and relationships. Perfect for individuals, couples, and families.",
-  keywords: ["WeTrack", "mood tracking", "task management", "relationships", "productivity", "app"],
-  openGraph: {
+export async function generateMetadata(): Promise<Metadata> {
+  return {
     title: "WeTrack - Mood and Task Tracking App",
-    description: "Track tasks, mood, and relationships with WeTrack. Real-time synchronization for couples and families.",
-    url: "/projects/wetrack",
-    images: [
-      {
-        url: "/screenshots/wetrack.png",
-        width: 1200,
-        height: 630,
-        alt: "WeTrack App Screenshot",
-      },
-    ],
-  },
-};
+    description: "WeTrack is your ultimate companion for tracking tasks, mood, and relationships. Achieve balance with smart analytics and real-time synchronization.",
+    keywords: ["WeTrack", "mood tracking", "task management", "relationships", "productivity", "app", "family sync", "conscious living"],
+    alternates: {
+      canonical: "/projects/wetrack",
+    },
+    openGraph: {
+      title: "WeTrack - Mood and Task Tracking App",
+      description: "Track tasks, mood, and relationships with WeTrack. Real-time synchronization for couples and families.",
+      url: "/projects/wetrack",
+      images: [
+        {
+          url: "/screenshots/wetrack.png",
+          width: 1200,
+          height: 630,
+          alt: "WeTrack App Screenshot",
+        },
+      ],
+    },
+  };
+}
 
 
 

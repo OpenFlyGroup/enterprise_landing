@@ -28,13 +28,17 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://openfly.tech"), // Assuming this is the domain
+  metadataBase: new URL("https://openfly.tech"),
   alternates: {
     canonical: "/",
+    languages: {
+      "en": "/en",
+      "ru": "/ru",
+    },
   },
   openGraph: {
     title: "OpenFly - Tools for Conscious Living",
-    description: "Join our community building innovative apps for balanced living. WeTrack for mood tracking, Dokker Space for legal documents.",
+    description: "OpenFly is a vibrant community building innovative apps and services to help people live balanced, fulfilling lives. Discover WeTrack and Dokker Space.",
     url: "https://openfly.tech",
     siteName: "OpenFly",
     images: [
@@ -51,18 +55,16 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "OpenFly - Tools for Conscious Living",
-    description: "Join our community building innovative apps for balanced living.",
+    description: "Discover innovative apps for balanced living built by the OpenFly community.",
     images: ["/brand/logo_horizontal.svg"],
     creator: "@openfly",
   },
   robots: {
     index: true,
     follow: true,
-    nocache: true,
     googleBot: {
       index: true,
       follow: true,
-      noimageindex: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,

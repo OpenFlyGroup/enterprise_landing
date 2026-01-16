@@ -21,7 +21,7 @@ export default function Join() {
       title: t("join.jobOpportunity.title"),
       description: t("join.jobOpportunity.description"),
       buttonText: t("join.jobOpportunity.button"),
-      href: "mailto:jobs@openfly.app",
+      href: "mailto:jobs@openfly.tech",
       icon: Briefcase,
       color: "secondary",
       disabled: true

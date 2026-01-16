@@ -9,24 +9,29 @@ import { setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 
 
-export const metadata: Metadata = {
-  title: "Dokker Space - Legal Document Creation",
-  description: "Create legal documents quickly and securely with Dokker Space. Your reliable assistant for drafting contracts online with AI-powered templates.",
-  keywords: ["Dokker Space", "legal documents", "contracts", "AI templates", "document creation", "online legal"],
-  openGraph: {
+export async function generateMetadata(): Promise<Metadata> {
+  return {
     title: "Dokker Space - Legal Document Creation",
-    description: "Create legal documents quickly and securely with AI-powered templates.",
-    url: "/projects/dokker_space",
-    images: [
-      {
-        url: "/screenshots/dokker.png",
-        width: 1200,
-        height: 630,
-        alt: "Dokker Space Screenshot",
-      },
-    ],
-  },
-};
+    description: "Create legal documents quickly and securely with Dokker Space. Your reliable assistant for drafting contracts online with AI-powered templates and digital signatures.",
+    keywords: ["Dokker Space", "legal documents", "contracts", "AI templates", "document creation", "online legal", "digital signature", "legal assistance"],
+    alternates: {
+      canonical: "/projects/dokker_space",
+    },
+    openGraph: {
+      title: "Dokker Space - Legal Document Creation",
+      description: "Create legal documents quickly and securely with AI-powered templates and digital signatures.",
+      url: "/projects/dokker_space",
+      images: [
+        {
+          url: "/screenshots/dokker.png",
+          width: 1200,
+          height: 630,
+          alt: "Dokker Space Screenshot",
+        },
+      ],
+    },
+  };
+}
 
 
 
