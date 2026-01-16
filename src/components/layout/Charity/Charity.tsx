@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
-import { Users, Scale, BookOpen, Cpu, Award, Heart } from "lucide-react";
+import { Scale, BookOpen, Cpu, Award, Heart } from "lucide-react";
 
 const Charity = () => {
   const t = useTranslations();
@@ -55,7 +55,7 @@ const Charity = () => {
                 <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
                   <Heart className="w-6 h-6 text-secondary" />
                 </div>
-                <p className="text-sm font-bold italic opacity-60">"Legal help is a social tool, not just a service."</p>
+                <p className="text-sm font-bold italic opacity-60">&ldquo;Legal help is a social tool, not just a service.&rdquo;</p>
               </div>
             </div>
           </motion.div>

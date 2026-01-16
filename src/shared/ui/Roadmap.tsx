@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "motion/react";
-import { CheckCircle2, Circle, Flag } from "lucide-react";
+import { CheckCircle2, Flag } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export interface IRoadmap {

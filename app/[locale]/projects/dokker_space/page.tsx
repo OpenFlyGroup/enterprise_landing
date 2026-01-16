@@ -1,28 +1,36 @@
-"use client";
 import FeaturesCarousel from "@/src/components/Projects/DokkerSpace/FeaturesCarousel/FeaturesCarousel";
-import Pricing from "@/src/components/Projects/DokkerSpace/Pricing/Pricing";
+
 import Preview, { PreviewProps } from "@/src/shared/ui/Preview";
 import Roadmap, { IRoadmap } from "@/src/shared/ui/Roadmap";
-import Stack, { IStack } from "@/src/shared/ui/Stack";
+
 import { Link } from "@/src/i18n/routing";
 import { useTranslations } from "next-intl";
-import {
-  SiDjango,
-  SiDocker,
-  SiNestjs,
-  SiNextdotjs,
-  SiPostgresql,
-} from "react-icons/si";
+import { setRequestLocale } from "next-intl/server";
+import type { Metadata } from "next";
 
-const stack: IStack[] = [
-  { id: "0", icon: SiNextdotjs, name: "Next.js" },
-  { id: "1", icon: SiNestjs, name: "NestJS" },
-  { id: "2", icon: SiDjango, name: "Django" },
-  { id: "3", icon: SiDocker, name: "Docker" },
-  { id: "4", icon: SiPostgresql, name: "PostgreSQL" },
-];
 
-const DokkerSpacePage = () => {
+export const metadata: Metadata = {
+  title: "Dokker Space - Legal Document Creation",
+  description: "Create legal documents quickly and securely with Dokker Space. Your reliable assistant for drafting contracts online with AI-powered templates.",
+  keywords: ["Dokker Space", "legal documents", "contracts", "AI templates", "document creation", "online legal"],
+  openGraph: {
+    title: "Dokker Space - Legal Document Creation",
+    description: "Create legal documents quickly and securely with AI-powered templates.",
+    url: "/projects/dokker_space",
+    images: [
+      {
+        url: "/screenshots/dokker.png",
+        width: 1200,
+        height: 630,
+        alt: "Dokker Space Screenshot",
+      },
+    ],
+  },
+};
+
+
+
+const DokkerSpaceClient = () => {
   const t = useTranslations();
 
   const PreviewContent: PreviewProps = {
@@ -60,14 +68,57 @@ const DokkerSpacePage = () => {
   ];
 
   return (
-    <main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Dokker Space",
+            "description": "Create legal documents quickly and securely. Your reliable assistant for drafting contracts online.",
+            "url": "https://openfly.tech/projects/dokker_space",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web Browser",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "description": "Free tier with basic templates"
+            },
+            "featureList": [
+              "AI-powered templates",
+              "Legal document creation",
+              "Secure document storage",
+              "Digital signatures"
+            ],
+            "publisher": {
+              "@type": "Organization",
+              "name": "OpenFly"
+            }
+          })
+        }}
+      />
+      <main>
       <Preview {...PreviewContent} />
       <FeaturesCarousel />
       {/* <Stack techs={stack} /> */}
       <Roadmap roadmap={roadmap} />
       {/* <Pricing /> */}
     </main>
+    </>
   );
+};
+
+const DokkerSpacePage = async ({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) => {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  return <DokkerSpaceClient />;
 };
 
 export default DokkerSpacePage;

@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
-import { ArrowDown, ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "@/src/i18n/routing";
 
 export default function Hero() {

@@ -14,8 +14,60 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "OpenFly",
-  description: "OpenFly",
+  title: {
+    default: "OpenFly - Tools for Conscious Living",
+    template: "%s | OpenFly"
+  },
+  description: "OpenFly is a vibrant community building innovative apps and services to help people live balanced, fulfilling lives. Discover WeTrack and Dokker Space.",
+  keywords: ["OpenFly", "WeTrack", "Dokker Space", "productivity", "mood tracking", "legal documents", "conscious living", "community"],
+  authors: [{ name: "OpenFly Team" }],
+  creator: "OpenFly",
+  publisher: "OpenFly",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://openfly.tech"), // Assuming this is the domain
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "OpenFly - Tools for Conscious Living",
+    description: "Join our community building innovative apps for balanced living. WeTrack for mood tracking, Dokker Space for legal documents.",
+    url: "https://openfly.tech",
+    siteName: "OpenFly",
+    images: [
+      {
+        url: "/brand/logo_horizontal.svg",
+        width: 1200,
+        height: 630,
+        alt: "OpenFly Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "OpenFly - Tools for Conscious Living",
+    description: "Join our community building innovative apps for balanced living.",
+    images: ["/brand/logo_horizontal.svg"],
+    creator: "@openfly",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export function generateStaticParams() {
@@ -45,6 +97,43 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "OpenFly",
+              "url": "https://openfly.tech",
+              "logo": "https://openfly.tech/brand/logo_horizontal.svg",
+              "description": "A vibrant community building innovative apps and services to help people live balanced, fulfilling lives.",
+              "foundingDate": "2025",
+              "founders": [
+                {
+                  "@type": "Organization",
+                  "name": "OpenFly Team"
+                }
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "team@openfly.tech",
+                "contactType": "customer service"
+              },
+              "sameAs": [
+                "https://github.com/openfly"
+              ],
+              "knowsAbout": [
+                "Software Development",
+                "Productivity Apps",
+                "Legal Technology",
+                "Mood Tracking",
+                "Task Management"
+              ]
+            })
+          }}
+        />
+      </head>
       <body className={`${roboto.className} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <Header />

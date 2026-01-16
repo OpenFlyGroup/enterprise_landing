@@ -56,25 +56,24 @@ const Header = () => {
         scrolled ? "py-4" : "py-8"
       } ${visible ? "translate-y-0" : "-translate-y-full"}`}
     >
-      <nav className="mx-auto max-w-7xl relative">
+      <nav className="mx-auto max-w-7xl relative flex items-center justify-between">
+        <div className="shrink-0">
+          <Link href="/" className="flex items-center group">
+            <Image
+              src={logo}
+              alt="OpenFly"
+              width={130}
+              height={80}
+              className="h-7 w-auto md:h-8 group-hover:scale-105 transition-transform"
+              priority
+            />
+          </Link>
+        </div>
         <div
-          className={`glass rounded-full px-6 py-3 flex items-center justify-between shadow-2xl transition-all duration-300 ${
+          className={`glass rounded-full p-1 flex items-center justify-between shadow-2xl transition-all duration-300 self-center ${
             scrolled ? "bg-base-100/90" : "bg-base-100/40"
           }`}
         >
-          <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center group">
-              <Image
-                src={logo}
-                alt="OpenFly"
-                width={130}
-                height={80}
-                className="h-7 w-auto md:h-8 group-hover:scale-105 transition-transform"
-                priority
-              />
-            </Link>
-          </div>
-
           <div className="hidden md:flex items-center gap-2">
             {NavLinks.map((link) => (
               <Link
@@ -85,11 +84,6 @@ const Header = () => {
                 {link.text}
               </Link>
             ))}
-            <div className="w-px h-4 bg-base-content/10 mx-2" />
-            <div className="flex items-center gap-1">
-              <LanguageToggle />
-              <ThemeToggle />
-            </div>
           </div>
 
           <div className="md:hidden">
@@ -101,6 +95,10 @@ const Header = () => {
               {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
+        </div>
+        <div className="hidden md:flex items-center gap-1">
+          <LanguageToggle />
+          <ThemeToggle />
         </div>
       </nav>
 

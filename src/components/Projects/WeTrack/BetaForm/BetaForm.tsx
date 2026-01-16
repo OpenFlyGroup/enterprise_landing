@@ -21,7 +21,10 @@ export default function BetaForm() {
   };
 
   return (
-    <section id="beta" className="section-padding px-4 bg-linear-to-b from-transparent to-primary/10">
+    <section
+      id="beta"
+      className="section-padding px-4 bg-linear-to-b from-transparent to-primary/10"
+    >
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -34,9 +37,17 @@ export default function BetaForm() {
           <div className="absolute bottom-0 left-0 w-32 h-32 bg-accent/20 blur-3xl -z-10" />
 
           <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight">
-            {t("weTrack.betaForm.title").split(" ").map((word, i) => 
-               i === 0 ? <span key={i} className="text-gradient">{word} </span> : word + " "
-            )}
+            {t("weTrack.betaForm.title")
+              .split(" ")
+              .map((word, i) =>
+                i === 0 ? (
+                  <span key={i} className="text-gradient">
+                    {word}{" "}
+                  </span>
+                ) : (
+                  word + " "
+                )
+              )}
           </h2>
           <p className="text-xl md:text-2xl font-medium text-base-content/60 mb-12 max-w-2xl mx-auto leading-relaxed">
             {t("weTrack.betaForm.description")}
@@ -49,19 +60,19 @@ export default function BetaForm() {
                 initial={{ opacity: 1 }}
                 exit={{ opacity: 0, y: -20 }}
                 onSubmit={handleSubmit}
-                className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto relative z-10"
+                className="flex flex-col sm:flex-row items-center gap-4 max-w-xl mx-auto relative z-10"
               >
                 <input
                   type="email"
                   placeholder={t("weTrack.betaForm.placeholder")}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="input input-lg bg-base-100/50 backdrop-blur-md border-base-content/10 rounded-2xl flex-1 focus:border-primary transition-all text-lg"
+                  className="input input-lg bg-base-100/50 backdrop-blur-md border-base-content/10 rounded-2xl flex-1 focus:border-primary transition-all"
                   required
                 />
                 <button
                   type="submit"
-                  className="btn btn-primary btn-lg rounded-2xl px-10 shadow-xl shadow-primary/20 group h-[4.5rem]"
+                  className="btn btn-primary btn-lg rounded-2xl px-10 shadow-xl shadow-primary/20"
                   disabled={status === "loading"}
                 >
                   {status === "loading" ? (
@@ -83,14 +94,22 @@ export default function BetaForm() {
                 className="py-12 flex flex-col items-center gap-6"
               >
                 <div className="w-24 h-24 bg-success/20 rounded-full flex items-center justify-center animate-bounce">
-                   <CheckCircle className="w-12 h-12 text-success" />
+                  <CheckCircle className="w-12 h-12 text-success" />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-3xl font-black">{t("weTrack.betaForm.successMessage")}</h3>
-                  <p className="text-base-content/60 font-medium">We've sent a confirmation to <span className="text-primary">{email}</span></p>
+                  <h3 className="text-3xl font-black">
+                    {t("weTrack.betaForm.successMessage")}
+                  </h3>
+                  <p className="text-base-content/60 font-medium">
+                    We&apos;ve sent a confirmation to{" "}
+                    <span className="text-primary">{email}</span>
+                  </p>
                 </div>
-                <button 
-                  onClick={() => { setStatus("idle"); setEmail(""); }}
+                <button
+                  onClick={() => {
+                    setStatus("idle");
+                    setEmail("");
+                  }}
                   className="btn btn-ghost btn-sm opacity-50 hover:opacity-100"
                 >
                   Register another email
@@ -103,4 +122,3 @@ export default function BetaForm() {
     </section>
   );
 }
-
