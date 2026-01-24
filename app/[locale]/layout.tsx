@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, setRequestLocale } from 'next-intl/server';
-import { notFound } from 'next/navigation';
-import { routing } from '@/src/i18n/routing';
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/src/i18n/routing";
 import "../globals.css";
 import Header from "@/src/components/layout/Header/Header";
 import Footer from "@/src/components/layout/Footer/Footer";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const roboto = Roboto({
   weight: ["400", "500", "700", "900"],
@@ -16,10 +17,20 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: {
     default: "OpenFly - Tools for Conscious Living",
-    template: "%s | OpenFly"
+    template: "%s | OpenFly",
   },
-  description: "OpenFly is a vibrant community building innovative apps and services to help people live balanced, fulfilling lives. Discover WeTrack and Dokker Space.",
-  keywords: ["OpenFly", "WeTrack", "Dokker Space", "productivity", "mood tracking", "legal documents", "conscious living", "community"],
+  description:
+    "OpenFly is a vibrant community building innovative apps and services to help people live balanced, fulfilling lives. Discover WeTrack and Dokker Space.",
+  keywords: [
+    "OpenFly",
+    "WeTrack",
+    "Dokker Space",
+    "productivity",
+    "mood tracking",
+    "legal documents",
+    "conscious living",
+    "community",
+  ],
   authors: [{ name: "OpenFly Team" }],
   creator: "OpenFly",
   publisher: "OpenFly",
@@ -32,13 +43,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
     languages: {
-      "en": "/en",
-      "ru": "/ru",
+      en: "/en",
+      ru: "/ru",
     },
   },
   openGraph: {
     title: "OpenFly - Tools for Conscious Living",
-    description: "OpenFly is a vibrant community building innovative apps and services to help people live balanced, fulfilling lives. Discover WeTrack and Dokker Space.",
+    description:
+      "OpenFly is a vibrant community building innovative apps and services to help people live balanced, fulfilling lives. Discover WeTrack and Dokker Space.",
     url: "https://openfly.tech",
     siteName: "OpenFly",
     images: [
@@ -55,7 +67,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "OpenFly - Tools for Conscious Living",
-    description: "Discover innovative apps for balanced living built by the OpenFly community.",
+    description:
+      "Discover innovative apps for balanced living built by the OpenFly community.",
     images: ["/brand/logo_horizontal.svg"],
     creator: "@openfly",
   },
@@ -78,7 +91,7 @@ export function generateStaticParams() {
 
 export default async function LocaleLayout({
   children,
-  params
+  params,
 }: {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -100,39 +113,39 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <head>
+        <GoogleAnalytics gaId="G-4J60CTF0JC" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "OpenFly",
-              "url": "https://openfly.tech",
-              "logo": "https://openfly.tech/brand/logo_horizontal.svg",
-              "description": "A vibrant community building innovative apps and services to help people live balanced, fulfilling lives.",
-              "foundingDate": "2025",
-              "founders": [
+              name: "OpenFly",
+              url: "https://openfly.tech",
+              logo: "https://openfly.tech/brand/logo_horizontal.svg",
+              description:
+                "A vibrant community building innovative apps and services to help people live balanced, fulfilling lives.",
+              foundingDate: "2025",
+              founders: [
                 {
                   "@type": "Organization",
-                  "name": "OpenFly Team"
-                }
+                  name: "OpenFly Team",
+                },
               ],
-              "contactPoint": {
+              contactPoint: {
                 "@type": "ContactPoint",
-                "email": "team@openfly.tech",
-                "contactType": "customer service"
+                email: "team@openfly.tech",
+                contactType: "customer service",
               },
-              "sameAs": [
-                "https://github.com/openfly"
-              ],
-              "knowsAbout": [
+              sameAs: ["https://github.com/openfly"],
+              knowsAbout: [
                 "Software Development",
                 "Productivity Apps",
                 "Legal Technology",
                 "Mood Tracking",
-                "Task Management"
-              ]
-            })
+                "Task Management",
+              ],
+            }),
           }}
         />
       </head>
