@@ -268,5 +268,10 @@
       "title": "Our Successes",
       "subtitle": "Coming soon: Stories of restored rights and regained stability."
     }
+  },
+  "cookieConsent": {
+    "message": "This website uses cookies to enhance your experience. By continuing to browse, you agree to our use of cookies.",
+    "accept": "Accept",
+    "decline": "Decline"
   }
 }
