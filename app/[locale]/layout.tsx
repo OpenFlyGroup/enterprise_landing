@@ -7,6 +7,7 @@ import { routing } from "@/src/i18n/routing";
 import "../globals.css";
 import Header from "@/src/components/layout/Header/Header";
 import Footer from "@/src/components/layout/Footer/Footer";
+import CookieConsent from "@/src/shared/ui/CookieConsent";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 const roboto = Roboto({
@@ -154,6 +155,7 @@ export default async function LocaleLayout({
           <Header />
           {children}
           <Footer />
+          <CookieConsent />
         </NextIntlClientProvider>
       </body>
     </html>
