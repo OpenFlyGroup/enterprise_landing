@@ -8,7 +8,6 @@ import "../globals.css";
 import Header from "@/src/components/layout/Header/Header";
 import Footer from "@/src/components/layout/Footer/Footer";
 import CookieConsent from "@/src/shared/ui/CookieConsent";
-import { GoogleAnalytics } from "@next/third-parties/google";
 
 const roboto = Roboto({
   weight: ["400", "500", "700", "900"],
@@ -114,7 +113,6 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <head>
-        <GoogleAnalytics gaId="G-4J60CTF0JC" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
